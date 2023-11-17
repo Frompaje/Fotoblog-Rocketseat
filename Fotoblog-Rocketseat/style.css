@@ -1,0 +1,206 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ==================CONTAINER============= */
+.container {
+    padding: 16px 112px;
+}
+
+/* ===================HEADER=============== */
+
+header nav,
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 72px;
+    font-size: 18px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700;
+    line-height: 28.80px;
+
+}
+
+header form {
+    width: 1200px;
+}
+
+.color-home {
+    color: #8D8D99;
+}
+
+.input-wrapper label {
+
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.input-wrapper input::placeholder {
+    font-family: 'Mulish', sans-serif;
+    color: #3D3D3D;
+    opacity: 0.5;
+}
+
+.input-wrapper input {
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+    padding: 16px;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    border: none;
+}
+
+
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* ====================MAIN====================== */
+main {
+    font-family: 'Mulish', sans-serif;
+    background-color: #F5F5F5;
+    height: 1210px;
+}
+
+.box-galeria {
+    padding: 16px 112px;
+    color: #202024;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+
+.box-conteudo1 {
+    margin-bottom: 22px;
+    width: 390px;
+    height: 310px;
+    background-color: white;
+
+}
+
+.box-conteudo1 img {
+    border-radius: 9px 9px 0 0;
+    width: 390px;
+}
+/* ANIMAÇÃO IMAGEM */
+figure {
+    z-index: 1;
+    overflow: hidden;
+}
+
+figure img {
+    transition: all 0.33s;
+}
+
+figure img:hover {
+    z-index: 0;
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+.box-figcaption {
+    padding-bottom: 102px;
+}
+
+.box-figcaption h2 {
+    margin: 12px 22px;
+    color: #202024;
+    font-size: 18.91px;
+    font-weight: 700;
+    line-height: 30.25px;
+}
+
+.box-figcaption span {
+    color: #202024;
+    font-size: 11.35px;
+    font-weight: 400;
+    line-height: 18.15px;
+    margin-left: 22px;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #F5F5F5;
+    width: 23px;
+    height: 8px;
+}
+
+.box-grupo1,
+.box-grupo2 {
+    margin-left: 112px;
+    gap: 20px;
+    display: flex;
+}
+
+.box-conteudo2 {
+    margin-bottom: 64px;
+}
+
+/* ====================Footer=====================*/
+footer {
+
+    width: auto;
+    height: 69px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+
+}
+
+footer p {
+    display: flex;
+    align-items: center;
+    color: #323238;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Mulish', sans-serif;
+
+}
+
+@media(min-width:1441px) {
+
+    /* HEADER */
+    header nav {
+
+        max-width: 1441px;
+        margin: 0 auto;
+    }
+
+    /* MAIN */
+    .container-main {
+        max-width: 1441px;
+        margin: 0 auto;
+    }
+
+}
+
+/* =================ANIMAÇÃO========== */
+.box-conteudo1 {
+    /* CHAMAMOS A ANIMAÇÃO COM ANIMATIO DEPOIS VEM O NOEM E O TEMPO QUE ELA TEM PARA COMEÇAR  E USAMOS O BACKWARD PARA PEGAR A PRIMEIRA PROPRIEDADE  */
+    animation: appear .4s var(--delay) backwards;
+    /* CRIEI UMA VARIAÇÃO COM --DELAY:2.s startando em 2segundos  */
+--delay:.2s
+}
+/* criei a animação com o keyrame e depois o nome dela */
+@keyframes appear {
+    /* onde começa, começa com o opacity 0 e o scale 0.7 bem pequeno */
+    0% {
+
+        opacity: 0;
+        translate: scale(0.7);
+    }
+    /* e passa para scale 1.2 aparecendo  */
+50%{
+    transform: scale(1.2);
+}
+/* depois adicionei diretamente no html a variavel delay no html, cada grupo de imagem recebendo 1s + */
+}
